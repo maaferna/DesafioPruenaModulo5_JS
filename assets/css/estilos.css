@@ -7,12 +7,10 @@ body {
   background-image: url("../imgs/fondo.jpg");
   background-position: bottom;
   background-size: cover;
-  background-repeat: no-repeat;
   height: 100vh;
   padding: 100px;
 }
 
-/* Formulario */
 
 #preview {
   height: 200px;
@@ -22,13 +20,23 @@ body {
   background-repeat: no-repeat;
 }
 
-
-/* Tabla de Participantes */
-
 #Animales {
-  height: 100%;
-  background: #f0f0f0;
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  justify-content: space-between; 
+  margin-bottom: 20px; 
 }
+
+#Animales .card {
+  width: calc(33.33% - 10px); /* Three cards per row with space between them */
+  box-sizing: border-box; /* Include padding and border in the width */
+  margin-bottom: 15px; /* Space between rows */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+
 
 #Animales div div {
   transition: all 200ms;
@@ -42,9 +50,51 @@ body {
   max-width: 30%;
 }
 
-/* Modal */
 
 .modal-dialog{
     max-width: 85% !important;
+}
+
+.card {
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 10px; 
+}
+
+.card-img-top {
+  height: 400px;
+  object-fit: cover; 
+  width: 100%;
+  border-top-left-radius: 10px; 
+  border-top-right-radius: 10px; 
+}
+
+.card-body {
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 15px;
+  padding: 15px;
+}
+
+.card-text {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+
+.card-body h5 {
+  margin-bottom: 10px; 
+}
+
+.icon-sound {
+  background-color: black;
 }
 

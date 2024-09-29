@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     animal = new Serpiente(nombre, edad, img, comentarios, './assets/sounds/Siseo.mp3');
                     break;
                 case 'Aguila':
-                    animal = new Aguila(nombre, edad, img, comentarios, './assets/audio/Chillido.mp3');
+                    animal = new Aguila(nombre, edad, img, comentarios, './assets/sounds/Chillido.mp3');
                     break;
                 default:
                     alert('Please select a valid animal');
@@ -60,4 +60,12 @@ function showToast(message) {
     const toast = new bootstrap.Toast(toastElement);
     toast.show();
 }
+
+
+(function () {
+    console.log("Initializing the application...");
+
+    const toast = new bootstrap.Toast(document.getElementById('successToast'));
+    toast.hide(); 
+})();
 
